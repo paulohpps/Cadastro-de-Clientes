@@ -5,7 +5,6 @@
  */
 
 package gui;
-
 import dao.consultaDAO;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -15,8 +14,7 @@ import modelo.UsuarioAtualizar;
 
 
 public class ConsultarUsuarios extends javax.swing.JFrame {
-    UsuarioAtualizar objuser = new UsuarioAtualizar();
-
+ 
     public ConsultarUsuarios() {
         initComponents();
     }
@@ -62,6 +60,11 @@ public class ConsultarUsuarios extends javax.swing.JFrame {
         });
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Nome", "CPF", "Email", "Telefone" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -216,6 +219,10 @@ public class ConsultarUsuarios extends javax.swing.JFrame {
         
         
     }//GEN-LAST:event_jTextField1KeyReleased
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
 
     public static void main(String args[]) {
